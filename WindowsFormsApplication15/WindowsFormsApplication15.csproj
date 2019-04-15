@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8ED1687F-EAE2-4123-94CD-2EDEA8F7E720}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication15</RootNamespace>
+    <AssemblyName>WindowsFormsApplication15</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataOptions.Designer.cs">
+      <DependentUpon>DataOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadSong.Designer.cs">
+      <DependentUpon>UploadSong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSettings.Designer.cs">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Collections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections.Designer.cs">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaySong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaySong.Designer.cs">
+      <DependentUpon>PlaySong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PlaySong.resx">
+      <DependentUpon>PlaySong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataOptions.resx">
+      <DependentUpon>DataOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadSong.resx">
+      <DependentUpon>UploadSong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSettings.resx">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections.resx">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g7574-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semcor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-64 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waves-png-hd-border-wave-png-free-download-1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f16937aee1202bcba272a69845d55c99.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bannerright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bannerdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotatedfly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\claromeio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-1192509_960_7201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circuloazul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-1192509_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circle-PNG-File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_4_7069501198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_6_2938643559.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_4_70695011981.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Gui1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_4_3980513960.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_2_6553205866.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_6_5526349853.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_10_7086400225.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_16_3756755020.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_20_6927810620.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_18_2591325804.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_13_5118609052.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_22_6493832692.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cenas4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar-372-456324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\297486dab7ebcd0176d1b1cd329791e7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-arrow-upload-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-services-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-document-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circled-play-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-musical-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-music-library-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-musical-notes-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-music-folder-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-combo-chart-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rock-music-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_1_3987620651.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-water-element-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fiat-500-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-school-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-violin-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sax-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guitar-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-electronic-music-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\richard_yu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_1_9903121434.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-change-theme-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-change-theme-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Gui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-buy-upgrade-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-as-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-speaker-96.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
