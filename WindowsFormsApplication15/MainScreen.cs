@@ -1,35 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication15
 {
     public partial class MainScreen : Form
     {
+        bool pb13=false;
+        bool pb14 = false;
+        bool pb15 = false;
+        bool pb16 = false;
+        bool pb17 = false;
+        bool pb18 = false;
+        bool pb19 = false;
+        bool pb20 = false;
+
         public MainScreen()
         {
             InitializeComponent();
             panel1.Location = new Point(-126, 82);
-            pictureBox5.Location= new Point(72, 263);
+            pictureBox5.Location = new Point(72, 263);
             pictureBox4.Location = new Point(-54, 263);
             pictureBox6.BackColor = Color.FromArgb(0, 0, 0);
             pictureBox7.BackColor = Color.FromArgb(0, 0, 0);
             pictureBox8.BackColor = Color.FromArgb(0, 0, 0);
             pictureBox9.BackColor = Color.FromArgb(0, 0, 0);
             pictureBox12.Location = new Point(506, 98);
-            
+            pictureBox21.Hide();
+            pictureBox22.Hide();
+            pictureBox23.Hide();
+
         }
         private bool mouseDown;
-        private Point lastLocation;  
+        private Point lastLocation;
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-          
+
         }
         int r = 244;
         int g = 65;
@@ -37,7 +43,7 @@ namespace WindowsFormsApplication15
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.BackgroundImage = global::WindowsFormsApplication15.Properties.Resources.black;
-           
+
         }
 
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
@@ -47,8 +53,8 @@ namespace WindowsFormsApplication15
 
         private void pictureBox3_MouseEnter(object sender, EventArgs e)
         {
-             pictureBox3.BackgroundImage = global::WindowsFormsApplication15.Properties.Resources.fecharC;
-            
+            pictureBox3.BackgroundImage = global::WindowsFormsApplication15.Properties.Resources.fecharC;
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -59,7 +65,7 @@ namespace WindowsFormsApplication15
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
             pictureBox3.BackgroundImage = global::WindowsFormsApplication15.Properties.Resources.fecharSC;
-         
+
         }
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
@@ -82,16 +88,16 @@ namespace WindowsFormsApplication15
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            
+
             pictureBox4.Left += 6;
             panel1.Left += 6;
-            if ( panel1.Left == 0)
+            if (panel1.Left == 0)
             {
                 timer2.Stop();
                 pictureBox4.Hide();
                 pictureBox5.Show();
             }
-         
+
         }
 
         private void pictureBox4_MouseEnter(object sender, EventArgs e)
@@ -119,19 +125,19 @@ namespace WindowsFormsApplication15
             pictureBox18.Hide();
             pictureBox19.Hide();
             pictureBox20.Hide();
-         
+
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
             pictureBox4.Left -= 6;
             panel1.Left -= 6;
-            if (panel1.Left==-126)
+            if (panel1.Left == -126)
             {
                 timer3.Stop();
-                
+
             }
-         
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -260,9 +266,9 @@ namespace WindowsFormsApplication15
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            
-          
-            
+
+
+
         }
 
         private void pictureBox10_MouseEnter(object sender, EventArgs e)
@@ -351,13 +357,14 @@ namespace WindowsFormsApplication15
         private void timer11_Tick(object sender, EventArgs e)
         {
             pictureBox16.Show();
+           
             timer11.Stop();
-         
+
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            Form f3=new DataOptions();
+            Form f3 = new DataOptions();
             f3.Show();
         }
 
@@ -439,8 +446,8 @@ namespace WindowsFormsApplication15
             pictureBox19.BringToFront();
             pictureBox18.BringToFront();
             pictureBox20.BringToFront();
-           
-           
+
+
         }
 
         private void pictureBox14_MouseEnter(object sender, EventArgs e)
@@ -456,8 +463,8 @@ namespace WindowsFormsApplication15
             pictureBox19.BringToFront();
             pictureBox18.BringToFront();
             pictureBox20.BringToFront();
-          
-          
+
+
         }
 
         private void pictureBox17_MouseEnter(object sender, EventArgs e)
@@ -473,7 +480,7 @@ namespace WindowsFormsApplication15
             pictureBox19.BringToFront();
             pictureBox18.BringToFront();
             pictureBox20.BringToFront();
-          
+
         }
 
         private void pictureBox19_MouseEnter(object sender, EventArgs e)
@@ -489,7 +496,7 @@ namespace WindowsFormsApplication15
             pictureBox19.BringToFront();
             pictureBox18.BringToFront();
             pictureBox20.BringToFront();
-       
+
         }
 
         private void pictureBox18_MouseEnter(object sender, EventArgs e)
@@ -505,7 +512,7 @@ namespace WindowsFormsApplication15
             pictureBox19.BringToFront();
             pictureBox18.BringToFront();
             pictureBox20.BringToFront();
-           
+
         }
 
         private void pictureBox20_MouseEnter(object sender, EventArgs e)
@@ -521,68 +528,318 @@ namespace WindowsFormsApplication15
             pictureBox19.BringToFront();
             pictureBox18.BringToFront();
             pictureBox20.BringToFront();
-          
-          
+
+
         }
 
         private void pictureBox20_Click(object sender, EventArgs e)
         {
-            pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb20 = true;
+            if (pb13 == true)
+            {
+
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_rock_music_96;
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb14 == true)
+            {
+
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_electronic_music_96;
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb15 == true)
+            {
+
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_fiat_500_96;
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb17 == true)
+            {
+
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_guitar_96;
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb18 == true)
+            {
+
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_violin_96;
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb19 == true)
+            {
+
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_sax_96;
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb16 == true)
+            {
+
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_water_element_96;
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
         }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb16 = true;
+            if (pb13==true)
+            {
+                
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_rock_music_96;
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb14 == true)
+            {
+                
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_electronic_music_96;
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb15 == true)
+            {
+              
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_fiat_500_96;
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }            
+            if (pb17 == true)
+            {
+              
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_guitar_96;
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb18 == true)
+            {
+               
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_violin_96;
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb19 == true)
+            {
+             
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_sax_96;
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb20 == true)
+            {
+                
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_school_96;
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb15 = true;
+            if (pb13 == true)
+            {
+
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_rock_music_96;
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb14 == true)
+            {
+
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_electronic_music_96;
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb16 == true)
+            {
+
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_water_element_96;
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb17 == true)
+            {
+
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_guitar_96;
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb18 == true)
+            {
+
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_violin_96;
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb19 == true)
+            {
+
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_sax_96;
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb20 == true)
+            {
+
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_school_96;
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb13 = true;
+            if (pb16 == true)
+            {
+
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_water_element_96;
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb14 == true)
+            {
+
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_electronic_music_96;
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb15 == true)
+            {
+
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_fiat_500_96;
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb17 == true)
+            {
+
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_guitar_96;
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb18 == true)
+            {
+
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_violin_96;
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb19 == true)
+            {
+
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_sax_96;
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb20 == true)
+            {
+
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_school_96;
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb14 = true;
+            if (pb13 == true)
+            {
+
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_rock_music_96;
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb16 == true)
+            {
+
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_water_element_96;
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb15 == true)
+            {
+
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_fiat_500_96;
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb17 == true)
+            {
+
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_guitar_96;
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb18 == true)
+            {
+
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_violin_96;
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb19 == true)
+            {
+
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_sax_96;
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb20 == true)
+            {
+
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_school_96;
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
         }
 
         private void pictureBox15_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox15.BackColor = Color.FromArgb(208, 250, 255); 
+            pictureBox15.BackColor = Color.FromArgb(208, 250, 255);
         }
 
         private void pictureBox13_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox13.BackColor = Color.FromArgb(208, 250, 255); 
+            pictureBox13.BackColor = Color.FromArgb(208, 250, 255);
         }
 
         private void pictureBox14_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox14.BackColor = Color.FromArgb(208, 250, 255); 
+            pictureBox14.BackColor = Color.FromArgb(208, 250, 255);
         }
 
         private void pictureBox17_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox17.BackColor = Color.FromArgb(208, 250, 255); 
+            pictureBox17.BackColor = Color.FromArgb(208, 250, 255);
         }
 
         private void pictureBox19_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox19.BackColor = Color.FromArgb(208, 250, 255); 
+            pictureBox19.BackColor = Color.FromArgb(208, 250, 255);
         }
 
         private void pictureBox18_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox18.BackColor = Color.FromArgb(208, 250, 255); 
+            pictureBox18.BackColor = Color.FromArgb(208, 250, 255);
         }
 
         private void pictureBox20_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox20.BackColor = Color.FromArgb(208, 250, 255); 
+            pictureBox20.BackColor = Color.FromArgb(208, 250, 255);
         }
 
         private void pictureBox16_MouseLeave(object sender, EventArgs e)
@@ -597,17 +854,185 @@ namespace WindowsFormsApplication15
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-            pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb17 = true;
+            if (pb13 == true)
+            {
+
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_rock_music_96;
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb14 == true)
+            {
+
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_electronic_music_96;
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb15 == true)
+            {
+
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_fiat_500_96;
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb16 == true)
+            {
+
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_water_element_96;
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb18 == true)
+            {
+
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_violin_96;
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb19 == true)
+            {
+
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_sax_96;
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb20 == true)
+            {
+
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_school_96;
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
-            pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb19 = true;
+            if (pb13 == true)
+            {
+
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_rock_music_96;
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb14 == true)
+            {
+
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_electronic_music_96;
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb15 == true)
+            {
+
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_fiat_500_96;
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb17 == true)
+            {
+
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_guitar_96;
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb18 == true)
+            {
+
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_violin_96;
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb16 == true)
+            {
+
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_water_element_96;
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb20 == true)
+            {
+
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_school_96;
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
         }
 
         private void pictureBox18_Click(object sender, EventArgs e)
         {
-            pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            pictureBox21.Show();
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
+            pb18 = true;
+            if (pb13 == true)
+            {
+
+                pictureBox13.BackgroundImage = Properties.Resources.icons8_rock_music_96;
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb14 == true)
+            {
+
+                pictureBox14.BackgroundImage = Properties.Resources.icons8_electronic_music_96;
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb15 == true)
+            {
+
+                pictureBox15.BackgroundImage = Properties.Resources.icons8_fiat_500_96;
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb17 == true)
+            {
+
+                pictureBox17.BackgroundImage = Properties.Resources.icons8_guitar_96;
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb16 == true)
+            {
+
+                pictureBox16.BackgroundImage = Properties.Resources.icons8_water_element_96;
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb19 == true)
+            {
+
+                pictureBox19.BackgroundImage = Properties.Resources.icons8_sax_96;
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            if (pb20 == true)
+            {
+
+                pictureBox20.BackgroundImage = Properties.Resources.icons8_school_96;
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+            else
+            {
+                pictureBox18.BackgroundImage = Properties.Resources.icons8_speaker_96;
+            }
+
+        }
+
+        private void PictureBox22_Click(object sender, EventArgs e)
+        {
+            pictureBox23.BringToFront();
+            pictureBox23.Show();
+
+        }
+
+        private void PictureBox21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox23_Click(object sender, EventArgs e)
+        {
+            pictureBox22.BringToFront();
+            pictureBox22.Show();
         }
     }
 }

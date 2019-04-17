@@ -19,7 +19,7 @@ namespace WindowsFormsApplication15.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -263,6 +263,16 @@ namespace WindowsFormsApplication15.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_circled_play_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_circled_play_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_circled_play_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-circled-play-64", resourceCulture);
@@ -356,6 +366,16 @@ namespace WindowsFormsApplication15.Properties {
         internal static System.Drawing.Bitmap icons8_musical_notes_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-musical-notes-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pause_button_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pause-button-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

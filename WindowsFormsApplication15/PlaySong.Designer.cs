@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApplication15
+﻿using System;
+
+namespace WindowsFormsApplication15
 {
     partial class PlaySong
     {
@@ -122,6 +124,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
